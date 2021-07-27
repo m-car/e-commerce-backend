@@ -11,7 +11,7 @@ Product.belongsTo(Category, {
 // Categories have many Products
 Category.belongsToMany(Product, {
   through: {
-    mode: productTags,
+    model: ProductTag,
     unique: false,
   },
   as: "category-product",
@@ -21,7 +21,7 @@ Category.belongsToMany(Product, {
 Product.belongsToMany(Tag, {
   // Define the third table needed to store the foreign keys
   through: {
-    model: productTags,
+    model: ProductTag,
     unique: false,
   },
   // Define an alias for when data is retrieved
