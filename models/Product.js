@@ -21,7 +21,7 @@ Product.init(
       allowNull: false,
     },
     price: {
-      type: DataTypes.decimal,
+      type: DataTypes.INTEGER,
       allowNull: false,
       //validate value is decimal
       validate: {
@@ -29,20 +29,20 @@ Product.init(
       },
     },
     stock: {
-      type: DataType.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       //set default value 10
-      default: 10,
+      // default: 10,
       //validate number is numeric
       validate: {
         isNaN: true, //maybe change this
       },
     },
     category_id: {
-      type: dataType.INTEGER,
+      type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      // autoIncrement: true,
     },
   },
   {

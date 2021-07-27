@@ -16,10 +16,6 @@ Tag.init(
     tag_name: {
       type: DataTypes.STRING,
       allowNull: false,
-      //set as primary key
-      primaryKey: true,
-      //use auto increment
-      autoIncrement: true,
     },
   },
   {

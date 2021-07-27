@@ -25,7 +25,7 @@ Product.belongsToMany(Tag, {
     unique: false,
   },
   // Define an alias for when data is retrieved
-  as: "product_tag",
+  as: "productTotag",
 });
 
 //product is like location
