@@ -33,10 +33,10 @@ Product.init(
       allowNull: false,
       //set default value 10
       default: 10,
+      //validate number is numeric
       validate: {
         isNaN: true, //maybe change this
       },
-      //validate number is numeric
     },
     category_id: {
       type: dataType.INTEGER,

@@ -17,8 +17,8 @@ Tag.init(
       type: DataTypes.STRING,
       allowNull: false,
       //set as primary key
-      //use auto increment
       primaryKey: true,
+      //use auto increment
       autoIncrement: true,
     },
   },
