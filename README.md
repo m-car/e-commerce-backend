@@ -12,3 +12,4 @@ I have configure a working Express.js API to use Sequelize to interact with a My
 - Enter "npm start" into the console to begin the command line interface.
 
 ## Usage
+https://drive.google.com/file/d/1Ypi2gkEoT7QsznUIue1mxHndo2rJLY8x/view
