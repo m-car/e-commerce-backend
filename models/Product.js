@@ -25,24 +25,26 @@ Product.init(
       allowNull: false,
       //validate value is decimal
       validate: {
-        isNumeric: true,
+        isDecimal: true,
       },
     },
     stock: {
       type: DataTypes.INTEGER,
       allowNull: false,
       //set default value 10
-      // default: 10,
+      defaultValue: 10,
       //validate number is numeric
       validate: {
-        isNaN: true, //maybe change this
+        isNumeric: true, //maybe change this
       },
     },
     category_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
-      primaryKey: true,
-      // autoIncrement: true,
+      references: {
+        model: "category",
+        key: "id",
+        unique: false,
+      },
     },
   },
   {

@@ -9,23 +9,23 @@ Product.belongsTo(Category, {
   foreignKey: "category_id",
 });
 // Categories have many Products
-Category.belongsToMany(Product, {
-  through: {
-    model: ProductTag,
-    unique: false,
-  },
-  as: "category-product",
+Category.hasMany(Product, {
+  foreignKey: "category_id",
+  onDelete: "CASCADE",
 });
 
 // Products belongToMany Tags (through ProductTag) many to many
 Product.belongsToMany(Tag, {
-  // Define the third table needed to store the foreign keys
   through: {
     model: ProductTag,
     unique: false,
   },
-  // Define an alias for when data is retrieved
-  as: "productTotag",
+});
+Tag.belongsToMany(Product, {
+  through: {
+    model: ProductTag,
+    unique: false,
+  },
 });
 
 //product is like location
